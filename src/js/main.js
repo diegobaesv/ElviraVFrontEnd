@@ -48,7 +48,7 @@ $(document).ready(function(){
       $('.btn-up').fadeOut();
     }
   });
-	/***** Mapa de GoogleMaps del Instituto *****/
+	/***** Mapa de GoogleMaps del Instituto 
 	var map;
 	function initialize() {
 	  var myLatlng = new google.maps.LatLng(13.869727, -88.628943);
@@ -65,7 +65,7 @@ $(document).ready(function(){
 	    title: 'Instituto Nacional de Sensuntepeque'
 	  });
 	}
-	google.maps.event.addDomListener(window, 'load', initialize);
+	google.maps.event.addDomListener(window, 'load', initialize);*****/
 
 
 });

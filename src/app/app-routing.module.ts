@@ -1,9 +1,12 @@
+import { CursoConductaComponent } from './pages/cursos/curso-conducta/curso-conducta.component';
+import { CursoAsistenciaComponent } from './pages/cursos/curso-asistencia/curso-asistencia.component';
+import { CursoDetalleComponent } from './pages/cursos/curso-detalle/curso-detalle.component';
+import { CursoListaComponent } from './pages/cursos/curso-lista/curso-lista.component';
+import { LoginComponent } from './pages/login/login.component';
 import { NotpageComponent } from './pages/notpage/notpage.component';
 import { ApoderadoRegistrarseComponent } from './pages/apoderado/apoderado-registrarse/apoderado-registrarse.component';
 import { ApoderadoPerfilComponent } from './pages/apoderado/apoderado-perfil/apoderado-perfil.component';
 import { ApoderadoInicioComponent } from './pages/apoderado/apoderado-inicio/apoderado-inicio.component';
-import { CursoAsistenciaComponent } from './pages/estudiante/cursos/curso-asistencia/curso-asistencia.component';
-import { CursoListaComponent } from './pages/estudiante/cursos/curso-lista/curso-lista.component';
 import { EstudiantePerfilComponent } from './pages/estudiante/estudiante-perfil/estudiante-perfil.component';
 import { EstudianteInicioComponent } from './pages/estudiante/estudiante-inicio/estudiante-inicio.component';
 import { InstitucionInformacionComponent } from './pages/institucion/institucion-informacion/institucion-informacion.component';
@@ -12,8 +15,6 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { InstitucionGaleriaComponent } from './pages/institucion/institucion-galeria/institucion-galeria.component';
-import { CursoDetalleComponent } from './pages/estudiante/cursos/curso-detalle/curso-detalle.component';
-import { CursoConductaComponent } from './pages/estudiante/cursos/curso-conducta/curso-conducta.component';
 import { EstudianteHorarioComponent } from './pages/estudiante/estudiante-horario/estudiante-horario.component';
 import { ApoderadoEstudiantesComponent } from './pages/apoderado/apoderado-estudiantes/apoderado-estudiantes.component';
 
@@ -22,6 +23,7 @@ import { ApoderadoEstudiantesComponent } from './pages/apoderado/apoderado-estud
 
 const routes: Routes = [
   { path: '', redirectTo: 'institucion/principal' , pathMatch: 'full'},
+  { path: 'login', component: LoginComponent},
   {
     path: 'institucion', children: [
       { path: 'principal', component: InstitucionPrincipalComponent },

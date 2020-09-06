@@ -11,17 +11,17 @@ import { InstitucionGaleriaComponent } from './pages/institucion/institucion-gal
 import { InstitucionInformacionComponent } from './pages/institucion/institucion-informacion/institucion-informacion.component';
 import { EstudianteInicioComponent } from './pages/estudiante/estudiante-inicio/estudiante-inicio.component';
 import { EstudiantePerfilComponent } from './pages/estudiante/estudiante-perfil/estudiante-perfil.component';
-import { CursoAsistenciaComponent } from './pages/estudiante/cursos/curso-asistencia/curso-asistencia.component';
-import { CursoConductaComponent } from './pages/estudiante/cursos/curso-conducta/curso-conducta.component';
+import { CursoAsistenciaComponent } from './pages/cursos/curso-asistencia/curso-asistencia.component';
+import { CursoConductaComponent } from './pages/cursos/curso-conducta/curso-conducta.component';
 import { EstudianteHorarioComponent } from './pages/estudiante/estudiante-horario/estudiante-horario.component';
 import { ApoderadoInicioComponent } from './pages/apoderado/apoderado-inicio/apoderado-inicio.component';
 import { ApoderadoRegistrarseComponent } from './pages/apoderado/apoderado-registrarse/apoderado-registrarse.component';
 import { ApoderadoPerfilComponent } from './pages/apoderado/apoderado-perfil/apoderado-perfil.component';
 import { ApoderadoEstudiantesComponent } from './pages/apoderado/apoderado-estudiantes/apoderado-estudiantes.component';
-import { ApoderadoTransmisionesComponent } from './pages/apoderado/apoderado-transmisiones/apoderado-transmisiones.component';
-import { CursoListaComponent } from './pages/estudiante/cursos/curso-lista/curso-lista.component';
-import { CursoDetalleComponent } from './pages/estudiante/cursos/curso-detalle/curso-detalle.component';
+import { CursoListaComponent } from './pages/cursos/curso-lista/curso-lista.component';
+import { CursoDetalleComponent } from './pages/cursos/curso-detalle/curso-detalle.component';
 import { NotpageComponent } from './pages/notpage/notpage.component';
+import { CursoTransmisionComponent } from './pages/cursos/curso-transmision/curso-transmision.component';
 
 
 
@@ -43,7 +43,7 @@ import { NotpageComponent } from './pages/notpage/notpage.component';
     ApoderadoRegistrarseComponent, 
     ApoderadoPerfilComponent, 
     ApoderadoEstudiantesComponent, 
-    ApoderadoTransmisionesComponent, CursoListaComponent, CursoDetalleComponent, NotpageComponent
+    CursoListaComponent, CursoDetalleComponent, NotpageComponent, CursoTransmisionComponent
   ],
   imports: [
     BrowserModule,
