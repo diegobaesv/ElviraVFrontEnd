@@ -1,0 +1,80 @@
+.Logo-Ins-Index img{
+    height: 250px;
+    margin: 15px auto;
+}
+.icon-index{
+    font-size: 190px;
+    margin: 15px;
+    transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    display: block;
+    text-align: center;
+    color: #B0B0B0;
+}
+/************** Sitios de la institución ***************/
+.important-links-index{
+    background-color: #F7F7F7; 
+    padding: 60px 0;
+    height: auto;
+}
+.important-links-index a{
+    border: 1px solid #737373;
+    background-color: transparent;
+    height: 130px;
+    width: 130px;
+    display: inline-block;
+    border-radius: 50%;
+    color: #737373;
+    margin: 30px 20px;
+    text-align: center;
+    transition: .3s all ease-in-out;
+    -moz-transition: .3s all ease-in-out;
+    -ms-transition: .3s all ease-in-out;
+    -webkit-transition: .3s all ease-in-out;
+}
+.important-links-index a:hover{
+    text-decoration: none;
+    background-color: #2E7D32;
+    border: 1px solid #F57C00;
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+}
+.important-links-index a:hover p,
+.important-links-index a:hover i{
+    color: #FFF;
+}
+.important-links-index a:active,
+.important-links-index a:focus{
+    outline: none;
+    text-decoration: none;
+}
+.important-links-index a i,
+.important-links-index a p{
+    transition: .3s all ease-in-out;
+    -moz-transition: .3s all ease-in-out;
+    -ms-transition: .3s all ease-in-out;
+    -webkit-transition: .3s all ease-in-out;
+    transform: translateY(25px);
+    -moz-transform: translateY(25px);
+    -ms-transform: translateY(25px);
+    -webkit-transform: translateY(25px);
+}
+.important-links-index a i{
+    font-size: 45px;
+}
+.important-links-index a p{
+    font-size: 18px;
+}
+/************** Estilos eventos***************/
+.events-ins{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    height: auto;
+    background-color: #fff;
+}

@@ -1,0 +1,31 @@
+.footer{ 
+    clear:both;
+    color: #fff;
+    background-color: #00796b;
+    position: relative;
+    height: auto;
+}
+.footer-copyright{
+    padding: 20px 0 10px 0;
+    font-size: 18px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.4);
+}
+.links-footer,
+.subtitles-footer{
+    padding-left: 50px;
+}
+
+.links-footer li a{
+    color: #fff;
+}
+.links-footer li a:hover{
+    color: #FFCA28;
+    text-decoration: none;
+}
+.links-footer li a:active,
+.links-footer li a:focus{
+    outline: none;
+    text-decoration: none;
+    color: #FFCA28;
+}
