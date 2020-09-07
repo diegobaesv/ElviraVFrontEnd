@@ -32,18 +32,19 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'cursos', component: CursoDetalleComponent, children: [
+      { path: 'asistencia', component: CursoAsistenciaComponent },
+      { path: 'conducta', component: CursoConductaComponent }
+    ]
+  },
+  {
     path: 'estudiante', children: [
       { path: '', redirectTo: 'inicio' , pathMatch: 'full'},
       { path: 'inicio', component: EstudianteInicioComponent },
       { path: 'perfil', component: EstudiantePerfilComponent },
       { path: 'cursos', component: CursoListaComponent },
-      { path: 'horario', component: EstudianteHorarioComponent },
-      {
-        path: 'cursos/:id', component: CursoDetalleComponent, children: [
-          { path: 'asistencia', component: CursoAsistenciaComponent },
-          { path: 'conducta', component: CursoConductaComponent }
-        ]
-      }
+      { path: 'horario', component: EstudianteHorarioComponent }
+    
     ]
   },
   {
