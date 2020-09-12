@@ -22,6 +22,7 @@ import { CursoListaComponent } from './pages/cursos/curso-lista/curso-lista.comp
 import { CursoDetalleComponent } from './pages/cursos/curso-detalle/curso-detalle.component';
 import { NotpageComponent } from './pages/notpage/notpage.component';
 import { CursoTransmisionComponent } from './pages/cursos/curso-transmision/curso-transmision.component';
+import { DocenteComponent } from './pages/docente/docente.component';
 
 
 
@@ -43,7 +44,7 @@ import { CursoTransmisionComponent } from './pages/cursos/curso-transmision/curs
     ApoderadoRegistrarseComponent, 
     ApoderadoPerfilComponent, 
     ApoderadoEstudiantesComponent, 
-    CursoListaComponent, CursoDetalleComponent, NotpageComponent, CursoTransmisionComponent
+    CursoListaComponent, CursoDetalleComponent, NotpageComponent, CursoTransmisionComponent, DocenteComponent
   ],
   imports: [
     BrowserModule,
