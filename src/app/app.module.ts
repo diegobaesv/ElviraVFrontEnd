@@ -23,6 +23,9 @@ import { CursoDetalleComponent } from './pages/cursos/curso-detalle/curso-detall
 import { NotpageComponent } from './pages/notpage/notpage.component';
 import { CursoTransmisionComponent } from './pages/cursos/curso-transmision/curso-transmision.component';
 import { DocenteComponent } from './pages/docente/docente.component';
+import { DocenteTransmisionComponent } from './pages/docente/docente-transmision/docente-transmision.component';
+import { DocentePerfilComponent } from './pages/docente/docente-perfil/docente-perfil.component';
+import { DocenteArchivoComponent } from './pages/docente/docente-archivo/docente-archivo.component';
 
 
 
@@ -44,7 +47,7 @@ import { DocenteComponent } from './pages/docente/docente.component';
     ApoderadoRegistrarseComponent, 
     ApoderadoPerfilComponent, 
     ApoderadoEstudiantesComponent, 
-    CursoListaComponent, CursoDetalleComponent, NotpageComponent, CursoTransmisionComponent, DocenteComponent
+    CursoListaComponent, CursoDetalleComponent, NotpageComponent, CursoTransmisionComponent, DocenteComponent, DocenteTransmisionComponent, DocentePerfilComponent, DocenteArchivoComponent
   ],
   imports: [
     BrowserModule,
