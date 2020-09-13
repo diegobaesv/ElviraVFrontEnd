@@ -1,58 +1,101 @@
 <div class="conteiner">
-    <div class="row" >
-        <div class="col-sm-4"></div>
-        
-        <div class="col-sm-4" style="border-style: double; border-color: #0fb8af">
+    <div class="row">
+        <div class="col-sm-3"></div>
+
+        <div class="col-sm-6" style="border-style: double; border-color: #0fb8af">
             <h2>Mi Perfil</h2><br>
-              <div class="row bordersolido" >
-                  <div class="col-sm-2"></div>
-                  <div class="col-sm-8"><h3><b>Nombre:</b> pablo</h3></div>
-                  <div class="col-sm-2"></div>
-              </div>
-              <div class="row">
-                  <div class="col-sm-2"></div>
-                  <div class="col-sm-8"><h3><b>Apellidos:</b> Perez</h3></div>
-                  <div class="col-sm-2"></div>
-              </div>
-              <div class="row">
-                  <div class="col-sm-2"></div>
-                  <div class="col-sm-8"><h3><b>Grado y Seccion :</b> 5° F</h3></div>
-                  <div class="col-sm-2"></div>
-              </div>
-              <div class="row">
+            <div class="row bordersolido">
                 <div class="col-sm-2"></div>
-                <div class="col-sm-8"><h3><b>DNI:</b> 45454545</h3></div>
+                <div class="col-sm-8">
+                    <h3><b>Nombre:</b> {{estudiante.nombre}}</h3>
+                </div>
                 <div class="col-sm-2"></div>
             </div>
             <div class="row">
                 <div class="col-sm-2"></div>
-                <div class="col-sm-8"><h3><b>Codigo_estudiante </b> NNNNN</h3></div>
+                <div class="col-sm-8">
+                    <h3><b>Apellidos:</b> {{estudiante.apellidoPaterno}} {{estudiante.apellidoMaterno}}</h3>
+                </div>
                 <div class="col-sm-2"></div>
             </div>
-              <div class="row">
+            <!--div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <h3><b>Grado y Seccion :</b> 5° F (CORREGIR)</h3>
+                </div>
+                <div class="col-sm-2"></div>
+            </div-->
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <h3><b>DNI:</b> {{estudiante.documentoIdentidad}}</h3>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <h3><b>Codigo estudiante </b> {{estudiante.codigoEstudiante}}</h3>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+            <div class="row bordersolido">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <h3><b>Telefono:</b> {{estudiante.telefono}}</h3>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+            <!--div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8"><h3><b>Tutor :</b> Lic. Lucas Castellar</h3></div>
                 <div class="col-sm-2"></div>
+            </div-->
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <h3><b>Apoderado(s):</b> </h3>
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-10">
+                            <ul>
+
+                                <ng-template ngFor let-apoderado [ngForOf]="estudiante.apoderados">
+                                    <li>
+                                        <h4>{{apoderado.apoderado.nombre}} 
+                                            {{apoderado.apoderado.apellidoPaterno}} 
+                                            {{apoderado.apoderado.apellidoMaterno}}</h4>
+                                    </li>
+                                </ng-template>
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                </div>
+                <div class="col-sm-2"></div>
             </div>
             <div class="row">
                 <div class="col-sm-2"></div>
-                <div class="col-sm-8"><h3><b>Apoderado :</b> Rafael Perez</h3></div>
-                <div class="col-sm-2"></div>
-            </div>
-              <div class="row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-8"><h3><b>Cursos :</b> </h3>
-                <div class="row">
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-10"><ul>
-                        <li><h4>Matematicas</h4></li>
-                        <li><h4>Comunicacion</h4></li>
-                        <li><h4>Ciencia Tecnologia y Ambiente</h4> </li>
-                        <li><h4>Educacion Religiosa</h4></li>
-                    </ul></div>
-                    <div class="col-sm-1"></div>
-                </div>
-                
+                <div class="col-sm-8">
+                    <h3><b>Cursos:</b> </h3>
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-10">
+                            <ul>
+
+                                <ng-template ngFor let-curso [ngForOf]="estudiante.cursos">
+                                    <li>
+                                        <h4>{{curso.curso.nombre}}</h4>
+                                    </li>
+                                </ng-template>
+
+                            </ul>
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
                 </div>
                 <div class="col-sm-2"></div>
             </div>

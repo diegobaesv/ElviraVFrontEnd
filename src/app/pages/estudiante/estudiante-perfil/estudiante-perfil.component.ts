@@ -1,3 +1,6 @@
+import { ActivatedRoute, Params } from '@angular/router';
+import { EstudianteService } from './../../../_service/estudiante.service';
+import { Estudiante } from './../../../_model/Estudiante';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EstudiantePerfilComponent implements OnInit {
 
-  constructor() { }
+  id: number;
+  estudiante = new Estudiante();
 
-  ngOnInit(): void {
+  constructor(private estudianteService: EstudianteService,private route: ActivatedRoute) {
+    
   }
+
+ ngOnInit(): void {
+   this.route.params.subscribe((params: Params) => {
+     this.id=params['id'];
+     this.initPage();
+   });
+ }
+
+
+ private initPage(){
+   this.estudianteService.getEstudiante(this.id).subscribe(data =>{
+     this.estudiante=data;
+   });
+ }
 
 }

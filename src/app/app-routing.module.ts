@@ -40,8 +40,7 @@ const routes: Routes = [
       { path: 'cursos', component: CursoListaComponent }, //0
       //{ path: 'cursos/:id', component: CursoDetalleComponent }, //0
       { path: 'cursos/:id/asistencia', component: CursoAsistenciaComponent },  //0
-      { path: 'cursos/:id/conducta', component: CursoConductaComponent },
-      { path: 'cursos/:id/transmision', component: CursoTransmisionComponent }     //0
+      { path: 'cursos/:id/conducta', component: CursoConductaComponent }
     ]
   },
   {
@@ -55,8 +54,8 @@ const routes: Routes = [
   },
   {path: 'docente/:id', component:DocenteComponent},
   {
-    path: 'curso/:id', children: [
-      { path: 'transmision' ,component: CursoListaComponent}
+    path: 'cursos/:id', children: [
+      { path: 'transmision' ,component: CursoTransmisionComponent} //1
     ]
   },
   { path: '**', component: NotpageComponent} //2
