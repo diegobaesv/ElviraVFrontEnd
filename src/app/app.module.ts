@@ -1,3 +1,4 @@
+import { EstudianteService } from './_service/estudiante.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -26,6 +27,7 @@ import { DocenteComponent } from './pages/docente/docente.component';
 import { DocenteTransmisionComponent } from './pages/docente/docente-transmision/docente-transmision.component';
 import { DocentePerfilComponent } from './pages/docente/docente-perfil/docente-perfil.component';
 import { DocenteArchivoComponent } from './pages/docente/docente-archivo/docente-archivo.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -51,9 +53,10 @@ import { DocenteArchivoComponent } from './pages/docente/docente-archivo/docente
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EstudianteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

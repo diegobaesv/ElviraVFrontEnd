@@ -1,3 +1,4 @@
+import { DocenteComponent } from './pages/docente/docente.component';
 import { CursoConductaComponent } from './pages/cursos/curso-conducta/curso-conducta.component';
 import { CursoAsistenciaComponent } from './pages/cursos/curso-asistencia/curso-asistencia.component';
 import { CursoDetalleComponent } from './pages/cursos/curso-detalle/curso-detalle.component';
@@ -11,9 +12,8 @@ import { EstudiantePerfilComponent } from './pages/estudiante/estudiante-perfil/
 import { EstudianteInicioComponent } from './pages/estudiante/estudiante-inicio/estudiante-inicio.component';
 import { InstitucionInformacionComponent } from './pages/institucion/institucion-informacion/institucion-informacion.component';
 import { InstitucionPrincipalComponent } from './pages/institucion/institucion-principal/institucion-principal.component';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
 import { InstitucionGaleriaComponent } from './pages/institucion/institucion-galeria/institucion-galeria.component';
 import { EstudianteHorarioComponent } from './pages/estudiante/estudiante-horario/estudiante-horario.component';
 import { ApoderadoEstudiantesComponent } from './pages/apoderado/apoderado-estudiantes/apoderado-estudiantes.component';
@@ -23,40 +23,42 @@ import { ApoderadoEstudiantesComponent } from './pages/apoderado/apoderado-estud
 
 const routes: Routes = [
   { path: '', redirectTo: 'institucion/principal' , pathMatch: 'full'},
-  { path: 'login', component: LoginComponent},
+  { path: 'login', component: LoginComponent}, //1
   {
     path: 'institucion', children: [
-      { path: 'principal', component: InstitucionPrincipalComponent },
-      { path: 'galeria', component: InstitucionGaleriaComponent },
-      { path: 'informacion', component: InstitucionInformacionComponent }
+      { path: 'principal', component: InstitucionPrincipalComponent }, //2
+      //{ path: 'galeria', component: InstitucionGaleriaComponent }, 
+      { path: 'informacion', component: InstitucionInformacionComponent } //2
     ]
   },
   {
-    path: 'cursos', component: CursoDetalleComponent, children: [
-      { path: 'asistencia', component: CursoAsistenciaComponent },
-      { path: 'conducta', component: CursoConductaComponent }
-    ]
-  },
-  {
-    path: 'estudiante', children: [
+    path: 'estudiante/:id', children: [ 
       { path: '', redirectTo: 'inicio' , pathMatch: 'full'},
-      { path: 'inicio', component: EstudianteInicioComponent },
-      { path: 'perfil', component: EstudiantePerfilComponent },
-      { path: 'cursos', component: CursoListaComponent },
-      { path: 'horario', component: EstudianteHorarioComponent }
-    
+      { path: 'inicio', component: EstudianteInicioComponent }, //2
+      { path: 'perfil', component: EstudiantePerfilComponent }, //0
+      { path: 'horario', component: EstudianteHorarioComponent }, //1
+      { path: 'cursos', component: CursoListaComponent }, //0
+      //{ path: 'cursos/:id', component: CursoDetalleComponent }, //0
+      { path: 'cursos/:id/asistencia', component: CursoAsistenciaComponent },  //0
+      { path: 'cursos/:id/conducta', component: CursoConductaComponent }    //0
     ]
   },
   {
-    path: 'apoderado', children: [
+    path: 'apoderado/:id', children: [
       { path: '', redirectTo: 'inicio' , pathMatch: 'full'},
-      { path: 'inicio', component: ApoderadoInicioComponent },
-      { path: 'perfil', component: ApoderadoPerfilComponent },
-      { path: 'registrarse', component: ApoderadoRegistrarseComponent },
-      { path: 'estudiantes', component: ApoderadoEstudiantesComponent}
+      { path: 'inicio', component: ApoderadoInicioComponent }, //1
+      { path: 'perfil', component: ApoderadoPerfilComponent }, //0
+      { path: 'registrarse', component: ApoderadoRegistrarseComponent }, //1
+      { path: 'estudiantes', component: ApoderadoEstudiantesComponent} //1
     ]
   },
-  { path: '**', component: NotpageComponent}
+  {path: 'docente/:id', component:DocenteComponent},
+  {
+    path: 'curso/:id', children: [
+      { path: 'transmision' ,component: CursoListaComponent}
+    ]
+  },
+  { path: '**', component: NotpageComponent} //2
 
 ];
 
