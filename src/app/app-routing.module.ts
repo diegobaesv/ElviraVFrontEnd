@@ -17,7 +17,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { InstitucionGaleriaComponent } from './pages/institucion/institucion-galeria/institucion-galeria.component';
 import { EstudianteHorarioComponent } from './pages/estudiante/estudiante-horario/estudiante-horario.component';
 import { ApoderadoEstudiantesComponent } from './pages/apoderado/apoderado-estudiantes/apoderado-estudiantes.component';
-
+import { CursoTransmisionComponent } from './pages/cursos/curso-transmision/curso-transmision.component';
 
 
 
@@ -40,7 +40,8 @@ const routes: Routes = [
       { path: 'cursos', component: CursoListaComponent }, //0
       //{ path: 'cursos/:id', component: CursoDetalleComponent }, //0
       { path: 'cursos/:id/asistencia', component: CursoAsistenciaComponent },  //0
-      { path: 'cursos/:id/conducta', component: CursoConductaComponent }    //0
+      { path: 'cursos/:id/conducta', component: CursoConductaComponent },
+      { path: 'cursos/:id/transmision', component: CursoTransmisionComponent }     //0
     ]
   },
   {
