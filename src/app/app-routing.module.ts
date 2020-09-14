@@ -23,7 +23,7 @@ import { CursoTransmisionComponent } from './pages/cursos/curso-transmision/curs
 
 const routes: Routes = [
   { path: '', redirectTo: 'institucion/principal' , pathMatch: 'full'},
-  { path: 'login', component: LoginComponent}, //1
+  { path: 'login', component: LoginComponent}, //2
   {
     path: 'institucion', children: [
       { path: 'principal', component: InstitucionPrincipalComponent }, //2
@@ -32,19 +32,18 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'estudiante/:id', children: [ 
+    path: 'estudiante', children: [ 
       { path: '', redirectTo: 'inicio' , pathMatch: 'full'},
       { path: 'inicio', component: EstudianteInicioComponent }, //2
-      { path: 'perfil', component: EstudiantePerfilComponent }, //0
-      { path: 'horario', component: EstudianteHorarioComponent }, //1
-      { path: 'cursos', component: CursoListaComponent }, //0
-      //{ path: 'cursos/:id', component: CursoDetalleComponent }, //0
-      { path: 'cursos/:id/asistencia', component: CursoAsistenciaComponent },  //0
-      { path: 'cursos/:id/conducta', component: CursoConductaComponent }
+      { path: 'perfil', component: EstudiantePerfilComponent }, //2
+      //{ path: 'horario', component: EstudianteHorarioComponent }, 
+      { path: 'cursos', component: CursoListaComponent } //2
+      //{ path: 'cursos/:id', component: CursoDetalleComponent },
+      //{ path: 'cursos/:id/conducta', component: CursoConductaComponent }
     ]
   },
   {
-    path: 'apoderado/:id', children: [
+    path: 'apoderado', children: [
       { path: '', redirectTo: 'inicio' , pathMatch: 'full'},
       { path: 'inicio', component: ApoderadoInicioComponent }, //1
       { path: 'perfil', component: ApoderadoPerfilComponent }, //0
@@ -55,7 +54,8 @@ const routes: Routes = [
   {path: 'docente/:id', component:DocenteComponent},
   {
     path: 'cursos/:id', children: [
-      { path: 'transmision' ,component: CursoTransmisionComponent} //1
+      { path: 'transmision' ,component: CursoTransmisionComponent}, //1
+      { path: 'asistencia',component: CursoAsistenciaComponent}
     ]
   },
   { path: '**', component: NotpageComponent} //2

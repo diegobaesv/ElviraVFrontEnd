@@ -1,3 +1,4 @@
+import { LoginService } from './_service/login.service';
 import { EstudianteService } from './_service/estudiante.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -28,6 +29,7 @@ import { DocenteTransmisionComponent } from './pages/docente/docente-transmision
 import { DocentePerfilComponent } from './pages/docente/docente-perfil/docente-perfil.component';
 import { DocenteArchivoComponent } from './pages/docente/docente-archivo/docente-archivo.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -54,9 +56,10 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [EstudianteService],
+  providers: [EstudianteService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
