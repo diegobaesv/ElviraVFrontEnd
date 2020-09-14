@@ -19,3 +19,7 @@ INSERT INTO public.apoderado(
 INSERT INTO public.apoderado_estudiante(
  id_apoderado, id_estudiante,create_at)
 VALUES ( 1, 1,'13-09-2020');
+
+INSERT INTO public.usuario(
+	 activo, create_at,  tipo_usuario, update_at, username, clave)
+	VALUES (true, '13-09-2020',  'ROLE_ESTUDIANTE', '13-09-2020', 'diegobaesv', '123');
