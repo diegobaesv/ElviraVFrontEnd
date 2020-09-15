@@ -45,10 +45,10 @@ const routes: Routes = [
   {
     path: 'apoderado', children: [
       { path: '', redirectTo: 'inicio' , pathMatch: 'full'},
-      { path: 'inicio', component: ApoderadoInicioComponent }, //1
-      { path: 'perfil', component: ApoderadoPerfilComponent }, //0
-      { path: 'registro', component: ApoderadoRegistrarseComponent }, //1
-      { path: 'estudiantes', component: ApoderadoEstudiantesComponent} //1
+      { path: 'inicio', component: ApoderadoInicioComponent }, //2
+      { path: 'perfil', component: ApoderadoPerfilComponent }, //2
+      { path: 'registro', component: ApoderadoRegistrarseComponent }, //2
+      { path: 'estudiantes', component: ApoderadoEstudiantesComponent} //2
     ]
   },
   {path: 'docente/:id', component:DocenteComponent},

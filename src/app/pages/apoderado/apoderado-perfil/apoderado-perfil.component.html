@@ -1,23 +1,29 @@
 <div class="row">
-    <div class="col-sm-4"></div>
-    <div class="col-sm-4">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
         <h3>Mi Perfil de Apoderado</h3>
         <br>
-        <h4><b>Nombre:</b>Marcus Ferrafon</h4><br>
-        <h4><b>Apellidos:</b>Lopez Concerl</h4><br>
-        <h4><b>DNI:</b>52525252</h4><br>
-        <h4><b>Celular de contacto:</b>965969696</h4><br>
-        <h4><b>alumnos:</b></h4><br>
-        <table>
+        <h4><b>Nombre:</b> {{apoderado.nombre}}</h4><br>
+        <h4><b>Apellidos:</b> {{apoderado.apellidoPaterno}} {{apoderado.apellidoMaterno}}</h4><br>
+        <h4><b>DNI:</b> {{apoderado.documentoIdentidad}}</h4><br>
+        <h4><b>Celular de contacto:</b> {{apoderado.telefono}}</h4><br>
+        <h4><b>Correo:</b> {{apoderado.correo}}</h4><br>
+       <!-- <h4><b>alumnos:</b></h4><br>
+        <tbody>
             <tr>
                 <th>Nombres y Apellidos</th>
                 <th>Codigo de Estudiantes</th>
             </tr>
             <tr>
-                <th>Raul Perez Sanchez</th>
-                <th>AS30502502020</th>
+                <ng-template ngFor let-curso [ngForOf]="apoderado.cursos">
+
+                </ng-template>
+                    
+
+                <td>Raul Perez Sanchez</td>
+                <td>AS30502502020</td>
             </tr>
-        </table>
+        </tbody>-->
     </div>
-    <div class="col-sm-4"></div>
+    <div class="col-sm-3"></div>
 </div>

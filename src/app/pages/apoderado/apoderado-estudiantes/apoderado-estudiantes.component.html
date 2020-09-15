@@ -1,15 +1,5 @@
 <!--======================================== Logo & Lema ========================================-->
-<section class="full-reset font-cover" style="background-image: url(assets/img/font-index.jpg);">
-    <div class="full-reset" style="height: 100%; background-color: rgba(255,255,255,.6); padding: 60px 0;">
-        <h1 class="text-center titles">Elvira Velasco </h1>
-        <figure class="Logo-Ins-Index">
-            <img src="assets/img/logo1.png" alt="Logo" class="img-responsive">
-        </figure>
-        <p class="lead text-center">
-            Cumplimos con el estandar educativo en esta pandemia
-        </p>
-    </div>
-</section>
+
 <div class="divider-general"></div>
 
         <br>
@@ -18,27 +8,58 @@
         
         <section class="events-ins">
             <div class="container-fluid">
-                <h2 class="text-center titles">Sus hijos y/o apoderados son</h2>
+                <h2 class="text-center titles">Sus hijos y cursos son</h2>
                 <br><br>
                 <div class="conteiner-fluid">
+                   
+
                     <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-4">
-                            <table>
-                                <tr>
-                                <th>Nombres y Apellidos</th>
-                                <th>Grado y Seccion </th>
-                                <th>Estado</th>
-                            </tr>
-                            <tr>
-                                <th><a href="">-----</a></th>
-                                <th>----------</th>
-                                <th>----------</th>
-                            </tr>
-                        </table>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-10">
+                            <ul>
+
+                                <ng-template ngFor let-x [ngForOf]="apoderado.estudiantes">
+                                    <li>
+                                        <h4>Hijo: {{x.estudiante.nombre}} 
+                                            {{x.estudiante.apellidoPaterno}} 
+                                            {{x.estudiante.apellidoMaterno}}</h4>
+                                            <table class="table">
+                                                <thead>
+                                                  <tr>
+                                                    <th scope="col">Curso</th>
+                                                    <th scope="col"></th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <ng-template ngFor let-y [ngForOf]="x.estudiante.cursos">
+                                                        <tr>
+                                                            <td>
+                                                                {{y.curso.nombre}}
+                                                            </td>
+                                                       
+                                                            <td>
+                                                                <a role="button" class="btn btn-success btn-sm" href="cursos/{{y.curso.idCurso}}/transmision"> Ver Transmision</a>
+                                                            </td>
+                                                          </tr>
+                                                    </ng-template>
+                            
+                            
+                                                  
+                                                
+                                                </tbody>
+                                              </table>
+                                    </li>
+                                </ng-template>
+
+                            </ul>
                         </div>
-                        <div class="col-sm-4"></div>
+                        <div class="col-sm-1"></div>
                     </div>
+                    
+
+
+
+
                 </div>
                 <div class="row">
                    

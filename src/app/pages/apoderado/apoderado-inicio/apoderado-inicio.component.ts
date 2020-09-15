@@ -1,3 +1,4 @@
+import { ApoderadoService } from './../../../_service/apoderado.service';
 import { Apoderado } from './../../../_model/Apoderado';
 import { TOKEN_NAME } from './../../../_shared/var.constant';
 import { Router } from '@angular/router';
@@ -14,7 +15,7 @@ export class ApoderadoInicioComponent implements OnInit {
   apoderado=new Apoderado();
 
 
-  constructor( private router: Router) { }
+  constructor(private apoderadoService: ApoderadoService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -33,9 +34,16 @@ export class ApoderadoInicioComponent implements OnInit {
 
   }
 
-  private initPage(){
 
+  private initPage(){
+    this.apoderadoService.getApoderadoById(this.id).subscribe(data =>{
+      this.apoderado=data;
+    }, (err)=>{
+      this.router.navigate(['login']);
+    }
+    );
   }
+
 
   redirigir(auth: string){
     switch (auth) {

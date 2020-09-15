@@ -1,5 +1,4 @@
-import { Apoderado } from './Apoderado';
-import { Curso } from './Curso';
+import { CursoEstudiante } from './CursoEstudiante';
 export class Estudiante{    
     idEstudiante: number;
     nombre: string;
@@ -9,7 +8,6 @@ export class Estudiante{
     telefono: string;
     correo: string;
     codigoEstudiante: string;
-    cursos: Curso[];
-    apoderados: Apoderado[];
+    cursos: CursoEstudiante[];
     
 }

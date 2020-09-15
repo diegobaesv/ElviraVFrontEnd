@@ -27,5 +27,7 @@ export class LoginService{
         
     }
 
+    registroApoderado
+
    
 }
