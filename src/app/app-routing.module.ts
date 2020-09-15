@@ -55,7 +55,8 @@ const routes: Routes = [
   {
     path: 'cursos/:id', children: [
       { path: 'transmision' ,component: CursoTransmisionComponent}, //1
-      { path: 'asistencia',component: CursoAsistenciaComponent}
+      { path: 'asistencia',component: CursoAsistenciaComponent},
+      { path: 'detalle', component: CursoDetalleComponent}
     ]
   },
   { path: '**', component: NotpageComponent} //2

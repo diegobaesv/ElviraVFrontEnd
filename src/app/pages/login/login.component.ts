@@ -2,7 +2,6 @@ import { TOKEN_NAME } from './../../_shared/var.constant';
 import { LoginService } from './../../_service/login.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import * as decode from 'jwt-decode';
 
 @Component({
   selector: 'app-login',
