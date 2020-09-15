@@ -47,7 +47,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'inicio' , pathMatch: 'full'},
       { path: 'inicio', component: ApoderadoInicioComponent }, //1
       { path: 'perfil', component: ApoderadoPerfilComponent }, //0
-      { path: 'registrarse', component: ApoderadoRegistrarseComponent }, //1
+      { path: 'registro', component: ApoderadoRegistrarseComponent }, //1
       { path: 'estudiantes', component: ApoderadoEstudiantesComponent} //1
     ]
   },

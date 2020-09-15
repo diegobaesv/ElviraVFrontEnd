@@ -69,5 +69,9 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  registroApoderado(){
+    this.router.navigate(['apoderado/registro']);
+  }
+
 
 }
