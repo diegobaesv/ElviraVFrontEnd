@@ -2,7 +2,6 @@ import { Router } from '@angular/router';
 import { HOST } from './../_shared/var.constant';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import decode from 'jwt-decode';
 
 @Injectable({
     providedIn: 'root'
